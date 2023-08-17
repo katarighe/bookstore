@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Nav() {
   return (
-    <div className="div_container">
+    <div className="nav_container">
       <ul className="nav_links">
         <h2>Bookstore CMS</h2>
         <Link to="/">
