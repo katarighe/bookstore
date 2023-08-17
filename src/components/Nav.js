@@ -12,9 +12,6 @@ function Nav() {
         <Link to="Categories">
           <li>CATEGORIES</li>
         </Link>
-        <Link to="Books">
-          <li>BOOKS</li>
-        </Link>
       </ul>
     </div>
   );
