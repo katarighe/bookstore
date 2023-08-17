@@ -2,23 +2,16 @@
 
 body {
   margin: 0;
-  background-color: #f5f5dc;
+  background-color: #fffffff1;
   overflow-x: hidden;
 }
 
 .books_container {
-  width: 85%;
-  height: 85vh;
+  width: 90%;
+  height: 90vh;
   background-color: #fff;
   margin: auto;
-  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
-}
-
-.nav_container {
-  width: 100%;
-  margin: auto;
-  background-color: #fff;
-  border-bottom: 1px #e4e5e9 solid;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.1);
 }
 
 h2 {
@@ -28,22 +21,43 @@ h2 {
   color: #0291ffea;
 }
 
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0291ffea;
+}
+
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0291ffea;
+}
+
+.nav_container {
+  width: 100%;
+  margin: auto;
+  background-color: #fff;
+  border-bottom: 1px #f5f6fa solid;
+}
+
 .nav_links {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2.4rem;
+  gap: 3rem;
   width: 100%;
 }
 
 .nav_links a {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 200;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   color: #000;
   text-decoration: none;
 }
