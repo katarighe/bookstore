@@ -22,11 +22,13 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Math Magicians Project <a name="about-project"></a>
+# 📖 Bookstore React Project <a name="about-project"></a>
 
-The **Maths Magicians React Project** is a beginner-level project on Microverse that teaches you how to build a React app. The project is about a simple calculator that can be used to perform basic mathematical operations.
+The **Bookstore React App** is a single-page application that allows users to browse and purchase books. It is built using the React JavaScript library and features a navbar and footer that provide navigation throughout the app. Users can register and login to create and manage their accounts, and they can add and remove books from a shopping cart. A search bar allows users to find books by title, author, or genre. A list of books that are currently in stock is also available, and each book has a page where users can view more information, such as the book's description, reviews, and price. Finally, users can view their past orders on an order history page.
 
 The project is built with React, JSX, CSS, and JavaScript. It is also deployed on Heroku, so you can try it out by visiting the live demo.
+
+The App is still under development, but it is a good example of how React can be used to build a dynamic and interactive web application. Some additional features that could be added to the app in the future include the ability to filter books by genre, price, or other criteria; the ability to add books to a wishlist; the ability to rate and review books; the ability to subscribe to email notifications about new books; the ability to purchase books in different currencies; and the ability to translate the app into different languages.
 
 ## 🛠 Built With <a name="built-with"></a>
 * React
@@ -43,10 +45,13 @@ The project is built with React, JSX, CSS, and JavaScript. It is also deployed o
 
 > The key features of this project include the following.
 
-- **It is a simple calculator that can be used to perform basic mathematical operations.**
-- **It is built with React, JSX, CSS, and JavaScript.**
-- **It is deployed on Heroku, so you can try it out by visiting the live demo.**
-- **The project is open source, so you are welcome to contribute to it.**
+- **A navbar and footer that provide navigation throughout the app.**
+- **A register and login form for users to create and manage their accounts.**
+- **A shopping cart where users can add and remove books.**
+- **A search bar that allows users to find books by title, author, or genre.**
+- **A list of books that are currently in stock.**
+- **A page for each book where users can view more information, such as the book's description, reviews, and price.**
+- **An order history page where users can view their past orders.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -75,7 +80,7 @@ Ensure you have:
 Use `git clone` to get your local copy of the project.
 
 ```bash
-git clone https://github.com/katarighe/math-magicians.git
+git clone https://github.com/katarighe/bookstore-react.git
 ```
 
 ### Install <a name="install"></a>
