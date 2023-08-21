@@ -1,16 +1,21 @@
+// Actions
 const CHECK_CATEGORY = 'bookstore/categories/CHECK_STATUS';
-const initalState = [];
-const categoriesReducer = (state = initalState, action) => {
-  switch (action.type) {
-    case CHECK_CATEGORY:
-      return ['Under construction'];
-    default:
-      return state;
-  }
-};
 
+const initialState = [];
+
+const categorySlice = createSlice({
+  name: 'categories',
+  initialState,
+  reducers: {
+    checkStatus: (state, action) => {
+      return ['Under construction'];
+    },
+  },
+});
+
+// Action creator
 export const checkAction = () => ({
   type: CHECK_CATEGORY,
 });
 
-export default categoriesReducer;
+export default categorySlice.reducer;
