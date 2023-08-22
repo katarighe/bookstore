@@ -8,7 +8,7 @@ export default function BooksList() {
 
   return (
     <ul style={{ listStyle: 'none' }}>
-      {books.map((book) => (
+      {books && books.map((book) => (
         <li key={book.item_id}>
           <Book
             title={book.title}
