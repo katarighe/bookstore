@@ -11,11 +11,11 @@ import Categories from './components/Categories';
 function App() {
   return (
     <BrowserRouter>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Books />} />
-          <Route path="/Categories" element={<Categories />} />
-        </Routes>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Books />} />
+        <Route path="/Categories" element={<Categories />} />
+      </Routes>
     </BrowserRouter>
   );
 }
