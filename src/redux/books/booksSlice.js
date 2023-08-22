@@ -3,31 +3,31 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   books: [
     {
-      id: 'book1',
+      id: 1,
       title: 'The Hitchhiker`s Guide to the Galaxy',
       author: 'Douglas Adams',
       category: 'Science fiction',
     },
     {
-      id: 'book2',
+      id: 2,
       title: 'The Lord of the Rings',
       author: 'J.R.R. Tolkien',
       category: 'Fantasy',
     },
     {
-      id: 'book3',
+      id: 3,
       title: 'To Kill a Mockingbird',
       author: 'Harper Lee',
       category: 'Literary fiction',
     },
     {
-      id: 'book4',
+      id: 4,
       title: 'The Great Gatsby',
       author: 'F. Scott Fitzgerald',
       category: 'Classics',
     },
     {
-      id: 'book5',
+      id: 5,
       title: 'Pride and Prejudice',
       author: 'Jane Austen',
       category: 'Romance',
