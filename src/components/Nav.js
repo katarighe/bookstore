@@ -1,28 +1,18 @@
-import { React } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Nav = () => {
-  const links = [
-    { id: 1, path: '/', text: 'Books' },
-    { id: 2, path: '/categories', text: 'Categories' },
-  ];
-
+export default function Nav() {
   return (
     <div className="nav_container">
       <ul className="nav_links">
         <h2>Bookstore CMS</h2>
-        {links.map((link) => (
-          <li key={link.id}>
-            <Link to={link.path}>
-              {' '}
-              {link.text}
-              {' '}
-            </Link>
-          </li>
-        ))}
+        <Link to="/">
+          <li>BOOKS</li>
+        </Link>
+        <Link to="Categories">
+          <li>CATEGORIES</li>
+        </Link>
       </ul>
     </div>
   );
-};
-
-export default Nav;
+}
