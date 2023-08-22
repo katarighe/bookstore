@@ -5,10 +5,21 @@ const initialState = {
   status: 'Under construction',
 };
 
-const categorySlice = createSlice({
+const CheckStatusFunc = (status) => {
+  if (status === 'Under construction') {
+    return 'Inactive';
+  }
+  return 'Active';
+};
+
+const categoriesSlice = createSlice({
   name: 'categories',
   initialState,
-  reducers: {},
+  reducers: {
+    changeStatus: (state, action) => {
+      state.status = CheckStatusFunc(action.payload);
+    },
+  },
 });
 
-export default categorySlice.reducer;
+export default categoriesSlice.reducer;
