@@ -5,7 +5,7 @@ const initialState = {
   status: 'Under construction',
 };
 
-const CheckStatusFunc = (status) => {
+export const CheckStatusFunc = (status) => {
   if (status === 'Under construction') {
     return 'Inactive';
   }
