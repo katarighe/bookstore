@@ -1,21 +1,21 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = ({ title, author }) => (
-  <>
-    <h3>{title}</h3>
-    <h4>{author}</h4>
-  </>
-);
+export default function Book({ title, author, removeBook }) {
+  return (
+    <div className="book_container">
+      <div>
+        <h2>{title}</h2>
+        <p>{author}</p>
+        <button type="button" onClick={removeBook}>
+          Remove
+        </button>
+      </div>
+    </div>
+  );
+}
 
 Book.propTypes = {
-  title: PropTypes.string,
-  author: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
-
-Book.defaultProps = {
-  title: '',
-  author: '',
-};
-
-export default Book;
