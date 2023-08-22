@@ -20,7 +20,7 @@ const Books = () => {
     {StoredBook.map(item => (
       <Book title={item.title} item={item.id} author={item.author} id={item.id} RemoveExistingBook={RemoveExistingBook}/>
     ))}
-    <AddNewBook AddNewBook={AddNewBook} />
+    <AddBook AddNewBook={AddNewBook} />
       </>
   );
 };
