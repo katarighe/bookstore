@@ -30,7 +30,7 @@ export default function AddNewBook() {
           value={values.title || ''}
           type="text"
           name="title"
-          placeholder="Book title"
+          placeholder="Title"
           onChange={handleChange}
         />
 
@@ -38,7 +38,7 @@ export default function AddNewBook() {
           value={values.author || ''}
           type="text"
           name="author"
-          placeholder="author"
+          placeholder="Author"
           onChange={handleChange}
         />
 
