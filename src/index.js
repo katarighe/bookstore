@@ -10,6 +10,7 @@ const store = configureStore();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    {/* Provide the Redux store to the entire application */}
     <Provider store={store}>
       <App />
     </Provider>
