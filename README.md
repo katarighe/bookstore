@@ -15,6 +15,7 @@
   - [Run tests](#run-tests)
   - [Usage](#usage)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -116,6 +117,23 @@ Launch the app with the following command
 - GitHub: [@katarighe](https://github.com/katarighe)
 - Twitter: [@katarighe](https://twitter.com/katarighe)
 - LinkedIn: [@mighe](https://linkedin.com/in/mighe)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> Here are some future features that could be added to the Bookstore React app in the future.
+
+- **User authentication and authorization:** This would allow users to create accounts, sign in and out, and have their own personal bookshelves.
+- **Shopping cart:** This would allow users to add books to their cart and checkout.
+- **Payment processing:** This would allow users to pay for their purchases with a credit card or other payment method.
+- **Shipping and delivery:** This would allow users to track the status of their orders and have their books shipped to them.
+- **Reviews and ratings:** This would allow users to leave reviews and ratings of books they have read.
+- **Wishlist:** This would allow users to save books they are interested in buying for later.
+- **Personalization:** This would allow the app to be customized to each user's preferences, such as their favorite genres or authors.
+- **Social features:** This would allow users to connect with other users, share book recommendations, and discuss books.
+
+These are just a few ideas for future features that could be added to the Bookstore React app. The specific features that are added will depend on the needs and wants of the users.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
