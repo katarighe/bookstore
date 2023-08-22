@@ -1,33 +1,21 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = ({
-  title, author, id, RemoveExistingBook,
-}) => (
-  <>
-    <h3>{title}</h3>
-    <h4>{author}</h4>
-    <button type="button">Comment</button>
-    <button type="button" onClick={() => RemoveExistingBook(id)}>
-      Remove
-    </button>
-    <button type="button">Edit</button>
-    <hr />
-  </>
-);
+export default function Book({ title, author, removeBook }) {
+  return (
+    <div className="book_container">
+      <div>
+        <h2>{title}</h2>
+        <p>{author}</p>
+        <button type="button" onClick={removeBook}>
+          Remove
+        </button>
+      </div>
+    </div>
+  );
+}
 
 Book.propTypes = {
-  title: PropTypes.string,
-  author: PropTypes.string,
-  id: PropTypes.number,
-  RemoveExistingBook: PropTypes.func,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
-
-Book.defaultProps = {
-  title: '',
-  author: '',
-  id: '',
-  RemoveExistingBook: null,
-};
-
-export default Book;

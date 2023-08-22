@@ -4,8 +4,8 @@ import AddNewBook from './AddBook';
 export default function Books() {
   return (
     <>
-    <BooksList />
-    <AddNewBook />
+      <BooksList />
+      <AddNewBook />
     </>
   );
 }
