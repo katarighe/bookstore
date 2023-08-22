@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addAction, removeAction } from '../redux/books/booksSlice';
+import { addBook, removeBook } from '../redux/books/booksSlice';
 import AddBook from './AddBook';
 import Book from './Book';
 
@@ -10,18 +10,25 @@ const Books = () => {
 
   const AddNewBook = (e, NewBook) => {
     e.preventDefault();
-    dispatch(addAction(NewBook));
+    dispatch(addBook(NewBook));
   };
   const RemoveExistingBook = (id) => {
-    dispatch(removeAction(id));
+    dispatch(removeBook(id));
   };
   return (
     <>
-    {StoredBook.map(item => (
-      <Book title={item.title} item={item.id} author={item.author} id={item.id} RemoveExistingBook={RemoveExistingBook}/>
-    ))}
-    <AddBook AddNewBook={AddNewBook} />
-      </>
+      {StoredBook.map((item) => (
+        <Book
+          key={item.id}
+          title={item.title}
+          item={item.id}
+          author={item.author}
+          id={item.id}
+          RemoveExistingBook={RemoveExistingBook}
+        />
+      ))}
+      <AddBook AddNewBook={AddNewBook} />
+    </>
   );
 };
 
