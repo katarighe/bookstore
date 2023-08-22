@@ -40,6 +40,10 @@ const booksSlice = createSlice({
   initialState,
   reducers: {
     addBook: (state, action) => {
+      const { title, author } = action.payload;
+      if (!title || !author) {
+        return;
+      }
       state.books.push(action.payload);
     },
     removeBook: (state, action) => {
