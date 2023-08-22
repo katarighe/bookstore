@@ -10,13 +10,13 @@ import Categories from './components/Categories';
 
 function App() {
   return (
-      <BrowserRouter>
+    <BrowserRouter>
         <Nav />
         <Routes>
-          <Route path='/' element={<Books />} />
-          <Route path='/Categories' element={<Categories />} />
+          <Route path="/" element={<Books />} />
+          <Route path="/Categories" element={<Categories />} />
         </Routes>
-      </BrowserRouter>
+    </BrowserRouter>
   );
 }
 
