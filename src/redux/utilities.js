@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const appID = 'dXhbHW84R2UylfqfKuq7';
 
-export const addBook = createAsyncThunk('books/addBook', async (book) => {
+export const addBook = createAsyncThunk('Books/addBook', async (book) => {
   try {
     await axios.post(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books`, book);
   } catch (e) {
@@ -12,7 +12,7 @@ export const addBook = createAsyncThunk('books/addBook', async (book) => {
   return book;
 });
 
-export const deleteBook = createAsyncThunk('books/deleteBook', async (bookID) => {
+export const deleteBook = createAsyncThunk('Books/deleteBook', async (bookID) => {
   try {
     await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books/${bookID}`);
   } catch (e) {
@@ -21,7 +21,7 @@ export const deleteBook = createAsyncThunk('books/deleteBook', async (bookID) =>
   return bookID;
 });
 
-export const getBooks = createAsyncThunk('books/getBooks', async () => {
+export const getBooks = createAsyncThunk('Books/getBooks', async () => {
   const response = await axios.get(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books`);
   const books = Object.entries(response.data).map((item) => (
     {
