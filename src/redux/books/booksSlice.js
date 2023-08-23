@@ -10,7 +10,11 @@ const initialState = {
 export const booksSlice = createSlice({
   name: 'books',
   initialState,
-  reducers: {},
+  reducers: {
+    addBook(state, action) {
+      state.value.push(action.payload);
+    },
+  },
 
   extraReducers: (builder) => {
     builder.addCase(addBook.fulfilled, (state, action) => {
