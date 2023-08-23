@@ -3,40 +3,51 @@ import axios from 'axios';
 
 const appID = '';
 
-export const getAppId = async() => {
+export const getAppId = async () => {
   try {
-  const response = await axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/');
-  return response.data; // This should be the ID of your newly created app
-  } catch (error) { 
-  console. error('Error creating app:', error);
-  return null;
-  } };
+    const response = await axios.post(
+      `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books`,
+    );
+    return response.data; // This should be the ID of your newly created app
+  } catch (error) {
+    console.error('Error creating app:', error);
+    return null;
+  }
+};
 
 export const addBook = createAsyncThunk('Books/addBook', async (book) => {
   try {
-    await axios.post(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books`, book);
+    await axios.post(
+      `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books`,
+      book,
+    );
   } catch (e) {
     throw new Error(e);
   }
   return book;
 });
 
-export const deleteBook = createAsyncThunk('Books/deleteBook', async (bookID) => {
-  try {
-    await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books/${bookID}`);
-  } catch (e) {
-    throw new Error(e);
-  }
-  return bookID;
-});
+export const deleteBook = createAsyncThunk(
+  'Books/deleteBook',
+  async (bookID) => {
+    try {
+      await axios.delete(
+        `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books/${bookID}`,
+      );
+    } catch (e) {
+      throw new Error(e);
+    }
+    return bookID;
+  },
+);
 
 export const getBooks = createAsyncThunk('Books/getBooks', async () => {
-  const response = await axios.get(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books`);
-  const books = Object.entries(response.data).map((item) => (
-    {
-      ...item[1][0],
-      item_id: item[0],
-    }
-  ));
+  const response = await axios.get(
+    `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books`,
+  );
+  const books = Object.entries(response.data).map((item) => ({
+    ...item[1][0],
+    item_id: item[0],
+  }));
   return books;
 });
