@@ -7,7 +7,7 @@ const template = {
   title: '',
   author: '',
   category: '',
-}
+};
 
 export default function AddNewBook() {
   const [values, setValue] = useState(template);
