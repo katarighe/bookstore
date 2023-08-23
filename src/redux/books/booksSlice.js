@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { addBook, deleteBook, getBooks } from '../utilities';
 
-const initalState = {
+const initialState = {
   value: [],
   isLoading: false,
   isError: undefined,
@@ -9,7 +10,7 @@ const initalState = {
 export const booksSlice = createSlice({
   name: 'books',
   initialState,
-  reducers: {}, 
+  reducers: {},
 
   extraReducers: (builder) => {
     builder.addCase(addBook.fulfilled, (state, action) => {
@@ -17,7 +18,9 @@ export const booksSlice = createSlice({
     });
 
     builder.addCase(deleteBook.fulfilled, (state, action) => {
-      state.value = state.value.filter((book) => book.item_id !== action.payload);
+      state.value = state.value.filter(
+        (book) => book.item_id !== action.payload
+      );
     });
 
     builder.addCase(getBooks.pending, (state) => {
