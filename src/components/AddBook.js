@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import addBook from '../redux/books/booksSlice';
+import { addBook } from '../redux/books/booksSlice';
 
 const template = {
   item_id: '',
