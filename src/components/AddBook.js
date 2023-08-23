@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { addBook } from '../redux/books/booksSlice';
+import addBook from '../redux/books/booksSlice';
 
 const template = {
   item_id: '',
@@ -17,9 +17,7 @@ export default function AddNewBook() {
     const { name } = e.target;
     const { value } = e.target;
     setValue((values) => ({
-      ...values,
-      item_id: crypto.randomUUID(),
-      [name]: value,
+      ...values, item_id: crypto.randomUUID(), [name]: value,
     }));
   }
 

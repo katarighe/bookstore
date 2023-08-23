@@ -5,13 +5,13 @@ import Book from './Book';
 
 export default function BooksList() {
   const { isLoading, isError, value } = useSelector((state) => state.books);
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getBooks());
   }, [dispatch]);
 
-  const loading = isLoading && <p>Loading, please wait...</p>;
+  const loading = isLoading && <p>Books loading, please wait!</p>;
   const error = isError && <p>Error loading books, please try again!</p>;
 
   return (

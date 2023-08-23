@@ -18,13 +18,7 @@ export const booksSlice = createSlice({
     });
 
     builder.addCase(deleteBook.fulfilled, (state, action) => {
-      state.value = state.value.filter(
-        (book) => book.item_id !== action.payload
-      );
-    });
-
-    builder.addCase(getBooks.pending, (state) => {
-      state.isLoading = true;
+      state.value = state.value.filter((book) => book.item_id !== action.payload);
     });
 
     builder.addCase(getBooks.pending, (state) => {
