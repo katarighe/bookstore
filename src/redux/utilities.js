@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const appID = 'GahFETqP7Dmi6zLej4E7';
 
-export const addBook = createAsyncThunk('Books/addBook', async (book) => {
+export const addBook = createAsyncThunk('books/addBook', async (book) => {
   try {
     await axios.post(
       `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books`,
@@ -16,7 +16,7 @@ export const addBook = createAsyncThunk('Books/addBook', async (book) => {
 });
 
 export const deleteBook = createAsyncThunk(
-  'Books/deleteBook',
+  'books/deleteBook',
   async (bookID) => {
     try {
       await axios.delete(
@@ -29,7 +29,7 @@ export const deleteBook = createAsyncThunk(
   },
 );
 
-export const getBooks = createAsyncThunk('Books/getBooks', async () => {
+export const getBooks = createAsyncThunk('books/getBooks', async () => {
   const response = await axios.get(
     `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books`,
   );
