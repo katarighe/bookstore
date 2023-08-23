@@ -24,6 +24,7 @@ export default function BooksList() {
             <Book
               title={book.title}
               author={book.author}
+              category={book.category}
               removeBook={() => dispatch(deleteBook(book.item_id))}
             />
           </li>

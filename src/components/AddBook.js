@@ -47,6 +47,14 @@ export default function AddNewBook() {
           onChange={handleChange}
         />
 
+        <input
+          value={values.category || ''}
+          type="text"
+          name="category"
+          placeholder="Category"
+          onChange={handleChange}
+        />
+
         <button type="submit" onClick={handleSubmit}>
           Add Book
         </button>
