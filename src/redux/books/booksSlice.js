@@ -1,51 +1,42 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { addBook, deleteBook, getBooks } from '../utilities';
 
 const initialState = {
-  books: [
-    {
-      item_id: 'item1',
-      title: 'The Hitchhiker`s Guide to the Galaxy',
-      author: 'Douglas Adams',
-      category: 'Science fiction',
-    },
-    {
-      item_id: 'item2',
-      title: 'The Lord of the Rings',
-      author: 'J.R.R. Tolkien',
-      category: 'Fantasy',
-    },
-    {
-      item_id: 'item3',
-      title: 'To Kill a Mockingbird',
-      author: 'Harper Lee',
-      category: 'Literary fiction',
-    },
-    {
-      item_id: 'item4',
-      title: 'The Great Gatsby',
-      author: 'F. Scott Fitzgerald',
-      category: 'Classics',
-    },
-  ],
+  value: [],
+  isLoading: false,
+  isError: undefined,
 };
 
 export const booksSlice = createSlice({
   name: 'books',
   initialState,
-  reducers: {
-    addBook: (state, action) => {
-      if (state.value) {
-        state.value.push(action.payload);
-      } else {
-        state.value = [action.payload];
-      }
-    },
-    removeBook: (state, action) => {
-      state.value = state.value.filter((book) => book.item_id !== action.payload);
-    },
+  reducers: {},
+
+  extraReducers: (builder) => {
+    builder.addCase(addBook.fulfilled, (state, action) => {
+      state.value.push(action.payload);
+    });
+
+    builder.addCase(deleteBook.fulfilled, (state, action) => {
+      state.value = state.value.filter(
+        (book) => book.item_id !== action.payload,
+      );
+    });
+
+    builder.addCase(getBooks.pending, (state) => {
+      state.isLoading = true;
+    });
+
+    builder.addCase(getBooks.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.value = action.payload;
+    });
+
+    builder.addCase(getBooks.rejected, (state) => {
+      state.isLoading = false;
+      state.isError = true;
+    });
   },
 });
-
-export const { addBook, removeBook } = booksSlice.actions;
 
 export default booksSlice.reducer;
