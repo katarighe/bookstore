@@ -1,19 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const appID = '';
-
-export const getAppId = async () => {
-  try {
-    const response = await axios.post(
-      `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books`,
-    );
-    return response.data; // This should be the ID of your newly created app
-  } catch (error) {
-    console.error('Error creating app:', error);
-    return null;
-  }
-};
+const appID = 'GahFETqP7Dmi6zLej4E7';
 
 export const addBook = createAsyncThunk('Books/addBook', async (book) => {
   try {
