@@ -63,7 +63,7 @@ export default function AddNewBook() {
             className={style.inputs}
           />
 
-          <button type="submit" onClick={handleSubmit}>
+          <button type="submit" className={style.submit_btn} onClick={handleSubmit}>
             Add Book
           </button>
         </form>

@@ -20,7 +20,7 @@ export default function ProgressBar() {
           {value}
           %
         </p>
-        <p style={{ fontSize: '0.9rem', color: '#a4a4a4' }}>
+        <p style={{ fontSize: '1rem', color: '#a4a4a4' }}>
           Completed
         </p>
       </div>

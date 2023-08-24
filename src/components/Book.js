@@ -40,11 +40,11 @@ export default function Book({
       <div style={line} />
       <div className={style.chapter}>
         <div>
-          <p className={style.chapter_heading}>CURRENT CHAPTER</p>
+          <p className={style.chapter_heading}>Current Chapter</p>
           <p className={style.chapter}>{`Chapter ${chapter()}`}</p>
         </div>
         <button type="button" className={style.progress_update}>
-          UPDATE PROGRESS
+          Update Progress
         </button>
       </div>
     </div>

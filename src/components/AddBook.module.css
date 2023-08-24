@@ -3,8 +3,9 @@ section {
 }
 
 section h2 {
-  color: #9c9595;
-  font-size: 1.75rem;
+  color: #000;
+  font-size: 2rem;
+  padding-top: 20px;
 }
 
 form {
@@ -41,4 +42,5 @@ hr {
   color: #fff;
   font-size: 0.8rem;
   cursor: pointer;
+  width: 70px;
 }

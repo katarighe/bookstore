@@ -15,12 +15,12 @@
   gap: 1em;
 }
 
-.book_details h2,
-.book_details p {
-  font-family: var(--robotoSlab);
+.book_details h2 {
+  font-family: var(--montserrat);
 }
 
 .book_details p {
+  font-family: var(--robotoSlab);
   font-size: 0.85em;
   font-weight: 400;
   color: var(--textColor);
@@ -45,11 +45,12 @@
   gap: 1em;
 }
 
-.progress_udate {
+.progress_update {
   appearance: none;
   padding: 0.5em;
   border: none;
   background-color: var(--textColor);
+  color: #fff;
 }
 
 .chapter {
