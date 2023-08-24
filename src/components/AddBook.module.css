@@ -1,0 +1,44 @@
+section {
+  margin-bottom: 2em;
+}
+
+section h2 {
+  color: #9c9595;
+  font-size: 1.75rem;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+hr {
+  border: 1px solid #e7e5e5;
+  margin-top: 3em;
+}
+
+.inputs {
+  padding: 0.5em 1em;
+  border: 1px solid #e7e5e5;
+  border-radius: 2.8px;
+  outline: none;
+}
+
+.inputs:nth-child(1) {
+  width: 500px;
+}
+
+.inputs:nth-child(2) {
+  width: 200px;
+  margin-right: 2em;
+}
+
+.submit_btn {
+  appearance: none;
+  border: none;
+  background-color: var(--textColor);
+  color: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
