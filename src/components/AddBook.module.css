@@ -3,15 +3,15 @@ section {
 }
 
 section h2 {
-  color: #000;
-  font-size: 2rem;
+  color: #8b8b8b;
+  font-size: 1.5rem;
   padding-top: 20px;
 }
 
 form {
   display: flex;
   justify-content: space-between;
-  margin-top: 1.75em;
+  margin-top: 2em;
 }
 
 hr {
@@ -24,16 +24,19 @@ hr {
   border: 1px solid #e7e5e5;
   border-radius: 2.8px;
   outline: none;
-  font-family: var(--robotoSlab);
+  font-family: var(--montserrat);
+  color: #cecece;
+  opacity: 0.8;
 }
 
 .inputs:nth-child(1) {
-  width: 500px;
+  width: 620px;
+  margin-right: 2em;
 }
 
 .inputs:nth-child(2) {
-  width: 240px;
-  margin-right: 1.5em;
+  width: 600px;
+  margin-right: 2em;
 }
 
 .submit_btn {
@@ -42,7 +45,8 @@ hr {
   font-family: var(--robotoSlab);
   background-color: var(--textColor);
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 1rem;
   cursor: pointer;
-  width: 70px;
+  width: 160px;
+  height: 50px;
 }

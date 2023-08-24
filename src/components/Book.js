@@ -6,7 +6,7 @@ const line = {
   width: '5em',
   border: '1px solid #e3e3e3',
   transform: 'rotate(90deg)',
-  marginRight: '-4em',
+  marginRight: '-1.5em',
 };
 
 export default function Book({
@@ -20,7 +20,7 @@ export default function Book({
     <div className={style.wrapper}>
       <div className={style.book}>
         <div className={style.book_details}>
-          <p>{category}</p>
+          <h3>{category}</h3>
           <h2>{title}</h2>
           <p>{author}</p>
         </div>
@@ -40,11 +40,11 @@ export default function Book({
       <div style={line} />
       <div className={style.chapter}>
         <div>
-          <p className={style.chapter_heading}>Current Chapter</p>
+          <p className={style.chapter_heading}>CURRENT CHAPTER</p>
           <p className={style.chapter}>{`Chapter ${chapter()}`}</p>
         </div>
         <button type="button" className={style.progress_update}>
-          Update Progress
+          UPDATE PROGRESS
         </button>
       </div>
     </div>

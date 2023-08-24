@@ -34,13 +34,13 @@ export default function AddNewBook() {
     <>
       <hr />
       <section>
-        <h2>Add New Book</h2>
+        <h2>ADD NEW BOOK</h2>
         <form>
           <input
             value={values.title || ''}
             type="text"
             name="title"
-            placeholder="Title"
+            placeholder="Book Title"
             onChange={handleChange}
             className={style.inputs}
           />
@@ -64,7 +64,7 @@ export default function AddNewBook() {
           />
 
           <button type="submit" className={style.submit_btn} onClick={handleSubmit}>
-            Add Book
+            ADD BOOK
           </button>
         </form>
       </section>
