@@ -1,6 +1,6 @@
+import { useState } from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import { useState } from 'react';
 
 const container = {
   display: 'flex',
