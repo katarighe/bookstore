@@ -18,7 +18,9 @@ export default function AddNewBook() {
     const { name } = e.target;
     const { value } = e.target;
     setValue((values) => ({
-      ...values, item_id: crypto.randomUUID(), [name]: value,
+      ...values,
+      item_id: crypto.randomUUID(),
+      [name]: value,
     }));
   }
 
@@ -30,42 +32,42 @@ export default function AddNewBook() {
 
   return (
     <>
-    <hr />
-    <section>
-      <h2>Add New Book</h2>
-      <form>
-        <input
-          value={values.title || ''}
-          type="text"
-          name="title"
-          placeholder="Title"
-          onChange={handleChange}
-          className={style.inputs}
-        />
+      <hr />
+      <section>
+        <h2>Add New Book</h2>
+        <form>
+          <input
+            value={values.title || ''}
+            type="text"
+            name="title"
+            placeholder="Title"
+            onChange={handleChange}
+            className={style.inputs}
+          />
 
-        <input
-          value={values.author || ''}
-          type="text"
-          name="author"
-          placeholder="Author"
-          onChange={handleChange}
-          className={style.inputs}
-        />
+          <input
+            value={values.author || ''}
+            type="text"
+            name="author"
+            placeholder="Author"
+            onChange={handleChange}
+            className={style.inputs}
+          />
 
-        <input
-          value={values.category || ''}
-          type="text"
-          name="category"
-          placeholder="Category"
-          onChange={handleChange}
-          className={style.inputs}
-        />
+          <input
+            value={values.category || ''}
+            type="text"
+            name="category"
+            placeholder="Category"
+            onChange={handleChange}
+            className={style.inputs}
+          />
 
-        <button type="submit" onClick={handleSubmit}>
-          Add Book
-        </button>
-      </form>
-    </section>
+          <button type="submit" onClick={handleSubmit}>
+            Add Book
+          </button>
+        </form>
+      </section>
     </>
   );
 }
