@@ -9,7 +9,7 @@
 .wrapper {
   display: flex;
   align-items: baseline;
-  gap: 2em;
+  gap: 3em;
 }
 
 .im_icon {
@@ -39,6 +39,7 @@
   color: #121212;
   text-decoration: none;
   opacity: 0.5;
+  font-size: 1rem;
 }
 
 .navigation ul a:focus,
