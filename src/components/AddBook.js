@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { addBook } from '../redux/utilities';
+import style from './AddBook.module.css';
 
 const template = {
   item_id: '',
@@ -17,7 +18,9 @@ export default function AddNewBook() {
     const { name } = e.target;
     const { value } = e.target;
     setValue((values) => ({
-      ...values, item_id: crypto.randomUUID(), [name]: value,
+      ...values,
+      item_id: crypto.randomUUID(),
+      [name]: value,
     }));
   }
 
@@ -28,37 +31,43 @@ export default function AddNewBook() {
   }
 
   return (
-    <section>
-      <h2>Add New Book</h2>
-      <form>
-        <input
-          value={values.title || ''}
-          type="text"
-          name="title"
-          placeholder="Title"
-          onChange={handleChange}
-        />
+    <>
+      <hr />
+      <section>
+        <h2>ADD NEW BOOK</h2>
+        <form>
+          <input
+            value={values.title || ''}
+            type="text"
+            name="title"
+            placeholder="Book Title"
+            onChange={handleChange}
+            className={style.inputs}
+          />
 
-        <input
-          value={values.author || ''}
-          type="text"
-          name="author"
-          placeholder="Author"
-          onChange={handleChange}
-        />
+          <input
+            value={values.author || ''}
+            type="text"
+            name="author"
+            placeholder="Author"
+            onChange={handleChange}
+            className={style.inputs}
+          />
 
-        <input
-          value={values.category || ''}
-          type="text"
-          name="category"
-          placeholder="Category"
-          onChange={handleChange}
-        />
+          <input
+            value={values.category || ''}
+            type="text"
+            name="category"
+            placeholder="Category"
+            onChange={handleChange}
+            className={style.inputs}
+          />
 
-        <button type="submit" onClick={handleSubmit}>
-          Add Book
-        </button>
-      </form>
-    </section>
+          <button type="submit" className={style.submit_btn} onClick={handleSubmit}>
+            ADD BOOK
+          </button>
+        </form>
+      </section>
+    </>
   );
 }
