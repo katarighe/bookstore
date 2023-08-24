@@ -31,12 +31,14 @@
   border: none;
   background: none;
   color: var(--textColor);
+  font-family: var(--montserrat);
   cursor: pointer;
 }
 
 .btn:nth-child(2) {
   border-left: 1px solid #8b8b8b;
   border-right: 1px solid #8b8b8b;
+  font-family: var(--montserrat);
   padding: 0 0.7em;
 }
 
@@ -50,6 +52,7 @@
   padding: 0.5em;
   border: none;
   background-color: var(--textColor);
+  font-family: var(--robotoSlab);
   color: #fff;
 }
 
