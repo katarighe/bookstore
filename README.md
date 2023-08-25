@@ -60,7 +60,7 @@ The App is still under development, but it is a good example of how React can be
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Live Demo of the Project coming soon
+- Live Demo of the Project: https://brilliant-vacherin-c698ee.netlify.app/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
